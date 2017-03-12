@@ -3,6 +3,8 @@ module Swagger::UsersApi
   include Swagger::Blocks
 
   included do
+    include Swagger::ErrorSchema
+
     swagger_path '/users' do
       operation :get do
         key :description, 'Get all users'
